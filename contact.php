@@ -1,9 +1,10 @@
 <!doctype html>
 <html>
 
-<?php include("includes/header.php"); ?>
-<link href="css/contact.css" rel="stylesheet" type="text/css" media="all">
-
+<?php 
+	$cssFile = "css/contact.css";
+	require_once ("includes/header.php");
+?>
   <div id="main">
   	<div id="subheader">
     	<h2>Contact Us</h2>
@@ -30,6 +31,6 @@
       </form>
     </div>
 
-<?php include("includes/footer.php"); ?>
+<?php require_once("includes/footer.php"); ?>
 
 </html>

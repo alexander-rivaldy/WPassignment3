@@ -1,15 +1,17 @@
 <!doctype html>
 <html>
 
-<?php include("includes/header.php"); ?>
-<link href="css/movies.css" rel="stylesheet" type="text/css" media="all">
+<?php 
+	$cssFile = "css/movies.css";
+	require_once ("includes/header.php");
+?>
 
   <div id="main">
   	<div id="subheader">
     	<h2>Now Showing</h2>
     </div>
   	<div class="moviebox">
-    	<img src="../a2/images/inside-out-poster.jpg" alt="Inside Out"/>
+    	<img src="images/inside-out-poster.jpg" alt="Inside Out"/>
         <div class="box">
         	<div class="infobox">
                 <h2>Inside Out</h2>
@@ -39,7 +41,7 @@
     </div>
     
     <div class="moviebox">
-    	<img src="../a2/images/mission-impossible-poster.jpg" alt="Mission: Impossible - Rogue Nation"/>
+    	<img src="images/mission-impossible-poster.jpg" alt="Mission: Impossible - Rogue Nation"/>
         <div class="box">
         	<div class="infobox">
                 <h2>Mission: Impossible - Rogue Nation</h2>
@@ -66,7 +68,7 @@
     </div>
     
     <div class="moviebox">
-    	<img src="../a2/images/the-tribe-poster.jpg" alt="The Tribe"/>
+    	<img src="images/the-tribe-poster.jpg" alt="The Tribe"/>
         <div class="box">
         	<div class="infobox">
                 <h2>The Tribe</h2>
@@ -93,7 +95,7 @@
     </div>
     
      <div class="moviebox">
-    	<img src="../a2/images/trainwreck-poster.jpg" alt="Trainwreck"/>
+    	<img src="images/trainwreck-poster.jpg" alt="Trainwreck"/>
         <div class="box">
         	<div class="infobox">
                 <h2>Trainwreck</h2>
@@ -122,6 +124,6 @@
         <a href="tickets.php">Book Tickets</a>
     </div>
     
-<?php include("includes/footer.php"); ?>
+<?php require_once("includes/footer.php"); ?>
   
 </html>

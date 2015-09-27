@@ -1,8 +1,10 @@
 <!doctype html>
 <html>
 
-<?php include("includes/header.php"); ?>
-<link href="css/about.css" rel="stylesheet" type="text/css" media="all">
+<?php 
+	$cssFile = "css/about.css";
+	require_once ("includes/header.php");
+?>
 
   <div id="main">
   	<div id="subheader">
@@ -102,6 +104,6 @@
         </div>
     </div>
     
-<?php include("includes/footer.php"); ?>
+<?php require_once("includes/footer.php"); ?>
 
 </html>

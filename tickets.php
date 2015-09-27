@@ -1,8 +1,10 @@
 <!doctype html>
 <html>
 
-<?php include("includes/header.php"); ?>
-<link href="css/tickets.css" rel="stylesheet" type="text/css" media="all">
+<?php 
+	$cssFile = "css/tickets.css";
+	require_once ("includes/header.php");
+?>
 <script type="text/javascript" src="js/bookingform.js"></script>
 
   <div id="main">
@@ -10,20 +12,20 @@
     	<h2>Book Tickets</h2>
     </div>
   	<div id="booking">
-    	<img src="../a2/images/seat-chart.jpg"/>
+    	<img src="images/seat-chart.jpg"/>
         <div id="legend">
         	<div class="legend">
-            	<img src="../a2/images/first-class.png"/>
+            	<img src="images/first-class.png"/>
                 <h3>First Class seats</h3>
                 <h6>Available for Adults and Children</h6>
             </div>
             <div class="legend">
-            	<img src="../a2/images/standard.png"/>
+            	<img src="images/standard.png"/>
                 <h3>Standard seats</h3>
                 <h6>Available for Adults, Concession, and Children</h6>
             </div>
             <div class="legend">
-            	<img src="../a2/images/bean-bag.png"/>
+            	<img src="images/bean-bag.png"/>
                 <h3>Bean bag seats</h3>
                 <h6>Accomodates 2 adults OR 1 adult + 1 child OR 3 children</h6>
             </div>
@@ -196,6 +198,6 @@
         </div>
     </div>
   
-<?php include("includes/footer.php"); ?>
+<?php require_once("includes/footer.php"); ?>
 
 </html>
