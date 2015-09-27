@@ -1,0 +1,399 @@
+@charset "UTF-8";
+
+@media only screen and (min-width: 320px) {
+	#about a {
+		color: #921719;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	#subheader {
+		position: relative;
+		margin: 0;
+	}
+	
+	#subheader h2 {
+		text-transform: uppercase;
+		padding: 2%;
+		color: #FFF;
+		margin-bottom: 0.5%;
+		font-size: 0.7em;
+	}
+	
+	#aboutPage {
+		width: 94%;
+		position: relative;
+		margin: 0.5% 0;
+		padding: 3% 3%;
+		padding-bottom: 7%;
+		display: inline-block;
+		background-color: #FFF;
+	}
+	
+	#aboutPage img {
+		width: 30%;
+		margin-right: 1.75%;
+		float: left;
+	}
+	
+	
+	#aboutPage h2 {
+		margin: 0;
+		color: #696969;
+		text-transform: uppercase;
+		font-size: 0.65em;
+	}
+	
+	
+	#aboutPage p {
+		font-size: 0.6em;
+		font-variant: normal;
+		text-align: left;
+		margin: 2.5%;
+		margin-left: 0;
+		margin-right: 1.5%;
+		color: #696969;
+		letter-spacing: 0.1em; 
+
+	}
+	
+	#sessions {
+		margin-top: 7.5%;
+	}
+	
+	.box {
+		margin: 1% 1%;
+		width: 30%;
+		display: inline-block;
+		vertical-align: top;
+		font-size: 0.75em;
+	}
+	
+	.box h3 {
+		font-size: 0.5em; 
+		color: #696969;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	
+	.day {
+		background-color: #696969;
+		padding: 3% 1%;
+		text-align: center;
+		margin: 5% 0; 
+	}
+	
+	.day h3 {
+		color: #FFF;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	
+	#category {
+		background-color: #FFF;
+		padding: 1%;
+		text-align: center;
+		margin: 1% 0; 
+	}
+	
+	#category h3 {
+		color: #FFF;
+	}
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	#subheader {
+		position: relative;
+		margin: 0;
+	}
+	
+	#subheader h2 {
+		text-transform: uppercase;
+		padding: 1.5%;
+		color: #FFF;
+		margin-bottom: 0.5%;
+		font-size: 0.9em;
+	}
+	
+	#aboutPage {
+		width: 94%;
+		position: relative;
+		margin: 0.5% 0;
+		padding: 3% 3%;
+		padding-bottom: 7%;
+		display: inline-block;
+		background-color: #FFF;
+	}
+	
+	#aboutPage img {
+		width: 30%;
+		margin-right: 1.75%;
+		float: left;
+	}
+	
+	
+	#aboutPage h2 {
+		margin: 0;
+		color: #696969;
+		text-transform: uppercase;
+		font-size: 0.9em;
+	}
+	
+	
+	#aboutPage p {
+		font-size: 0.7em;
+		font-variant: normal;
+		text-align: left;
+		margin: 2.5%;
+		margin-left: 0;
+		margin-right: 1.5%;
+		color: #696969;
+		letter-spacing: 0.1em; 
+
+	}
+	
+	#sessions {
+		margin-top: 7.5%;
+	}
+	
+	.box {
+		margin: 1% 1%;
+		width: 30%;
+		display: inline-block;
+		vertical-align: top;
+		font-size: 0.9em;
+	}
+	
+	.box h3 {
+		font-size: 0.7em; 
+		color: #696969;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	
+	.day {
+		background-color: #696969;
+		padding: 3% 1%;
+		text-align: center;
+		margin: 5% 0; 
+	}
+	
+	.day h3 {
+		font-size: 0.7em; 
+		color: #FFF;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	
+	#category {
+		background-color: #FFF;
+		padding: 1%;
+		text-align: center;
+		margin: 2% 0; 
+	}
+	
+	#category h3 {
+		color: #FFF;
+	}
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 999px) {
+	#subheader {
+		position: relative;
+		margin: 0;
+	}
+	
+	#subheader h2 {
+		text-transform: uppercase;
+		padding: 1.25%;
+		color: #FFF;
+		margin-bottom: 0.5%;
+		font-size: 1em;
+	}
+	
+	#aboutPage {
+		width: 94%;
+		position: relative;
+		margin: 0.5% 0;
+		padding: 3%;
+		display: inline-block;
+		background-color: #FFF;
+	}
+	
+	#aboutPage img {
+		width: 30%;
+		margin-right: 1.75%;
+		float: left;
+	}
+	
+	
+	#aboutPage h2 {
+		margin: 0;
+		color: #696969;
+		text-transform: uppercase;
+		font-size: 1em;
+	}
+	
+	
+	#aboutPage p {
+		font-size: 0.8em;
+		font-variant: normal;
+		text-align: left;
+		margin: 2.5%;
+		margin-left: 0;
+		margin-right: 1.5%;
+		color: #696969;
+		letter-spacing: 0.1em; 
+
+	}
+	
+	#sessions {
+		margin-top: 7.5%;
+	}
+	
+	.box {
+		margin: 1% 1%;
+		width: 30%;
+		display: inline-block;
+		vertical-align: top;
+		font-size: 0.9em;
+	}
+	
+	.box h3 {
+		font-size: 0.8em; 
+		color: #696969;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	
+	.day {
+		background-color: #696969;
+		padding: 3% 1%;
+		text-align: center;
+		margin: 5% 0; 
+	}
+	
+	.day h3 {
+		font-size: 0.75em; 
+		color: #FFF;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	
+	#category {
+		background-color: #FFF;
+		padding: 1%;
+		text-align: center;
+		margin: 4% 0; 
+	}
+	
+	#category h3 {
+		color: #FFF;
+	}
+
+}
+
+@media only screen and (min-width: 1000px) {
+	#subheader {
+		position: relative;
+		margin: 0;
+	}
+	
+	#subheader h2 {
+		text-transform: uppercase;
+		padding: 1.25%;
+		color: #FFF;
+		margin-bottom: 0.5%;
+		font-size: 1em;
+	}
+	
+	#aboutPage {
+		width: 94%;
+		position: relative;
+		margin: 0.5% 0;
+		padding: 3%;
+		display: inline-block;
+		background-color: #FFF;
+	}
+	
+	#aboutPage img {
+		width: 30%;
+		margin-right: 1.75%;
+		float: left;
+	}
+	
+	
+	#aboutPage h2 {
+		margin: 0;
+		color: #696969;
+		text-transform: uppercase;
+		font-size: 1em;
+	}
+	
+	#aboutPage p {
+		font-size: 0.9em;
+		font-variant: normal;
+		text-align: left;
+		margin: 2.5%;
+		margin-left: 0;
+		margin-right: 1.5%;
+		color: #696969;
+		letter-spacing: 0.1em; 
+
+	}
+	
+	#sessions {
+		margin-top: 7.5%;
+	}
+	
+	.box {
+		margin: 1% 1%;
+		width: 30%;
+		display: inline-block;
+		vertical-align: top;
+		font-size: 0.9em;
+	}
+	
+	.box h3 {
+		font-size: 0.9em; 
+		color: #696969;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	
+	.day {
+		background-color: #696969;
+		padding: 3% 1%;
+		text-align: center;
+		margin: 5% 0; 
+	}
+	
+	.day h3 {
+		font-size: 0.85em; 
+		color: #FFF;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		margin: 0;
+	}
+	
+	#category {
+		background-color: #FFF;
+		padding: 1%;
+		text-align: center;
+		margin: 4% 0; 
+	}
+	
+	#category h3 {
+		color: #FFF;
+	}
+
+}
