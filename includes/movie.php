@@ -11,22 +11,38 @@ echo "
             <div class='moreinfo'>
             	<details>
                 	<summary>More Info</summary>
-                	<p>".$obj->$type->description."</p>
-                    <div id='sessions'>
-                    	<h3>Session Times:</h3>
-                    	<div class='session'>
-                        	<p>Mon - Tue: 1 PM</p>
+                	<p>".implode($obj->$type->description)."</p>
+                    <div id='screenings'>
+                    	<h3>Session Times:</h3>";
+	if(array_key_exists('Monday',$obj->$type->screenings) )
+	{
+		echo "
+						<div class='session'>
+                        	<p>Mon - Tue:".$obj->$type->screenings->Monday."</p>
                         </div>
-                        <div class='session'>
-                        	<p>Wed - Fri: 6 PM</p>
+				";
+	}
+	if(array_key_exists('Wednesday',$obj->$type->screenings) )
+	{
+		echo "
+						<div class='session'>
+                        	<p>Wed - Fri:".$obj->$type->screenings->Wednesday."</p>
                         </div>
-                        <div class='session'>
-                        	<p>Sat - Sun: 12 PM</p>
+				";
+	}
+	if(array_key_exists('Saturday',$obj->$type->screenings) )
+	{
+		echo "
+						<div class='session'>
+                        	<p>Sat - Sun:".$obj->$type->screenings->Saturday."</p>
                         </div>
+				";
+	}
+echo"
                     </div>
                 </details>
             </div>
         </div>
         <a href='tickets.php'>Book Tickets</a>
-    </div>"
+    </div>";
 ?>

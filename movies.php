@@ -17,6 +17,12 @@
 			</div>";
 	$type = "CH";
 	include("includes/movie.php");
+	$type = "AF";
+	include("includes/movie.php");
+	$type = "AC";
+	include("includes/movie.php");
+	$type = "RC";
+	include("includes/movie.php");
 	echo "</div>"
 ?>
     
