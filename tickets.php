@@ -5,6 +5,7 @@
 	$cssFile = "css/tickets.css";
 	require_once ("includes/header.php");
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/bookingform.js"></script>
 
   <div id="main">
@@ -36,11 +37,8 @@
                     <div class="category">
                         <label>Movie Title:</label>
                         <select name="movie" id="movie" onchange="movieChange()">
-                        	<option value="default"></option>
-                            <option value="CH">Inside Out</option>
-                            <option value="AC">Mission: Impossible - Rogue Nation</option>
-                            <option value="AF">The Tribe</option>
-                            <option value="RC">Trainwreck</option>
+                        	<option value="default" disabled selected></option>
+                            
                         </select><br>
                     </div>
                     <div class="category">
@@ -55,142 +53,39 @@
                     </div>
                 </div>
                 <div id="ticketinfo">
-                	<div class="category">
-                        <label>Adult:</label>
-                        <select name="SA" class="ticket" id="SA" onchange="seatChange()">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <label class="subtotal" id="subtotalSA">$0.00</label><br>
-                	</div>
-                    <div class="category">
-                        <label>Concession:</label>
-                        <select name="SP" class="ticket" id="SP" onchange="seatChange()">
-							<option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <label class="subtotal" id="subtotalSP">$0.00</label><br>
-                	</div>
-                    <div class="category">
-                        <label>Child:</label>
-                        <select name="SC" class="ticket" id="SC" onchange="seatChange()">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <label class="subtotal" id="subtotalSC">$0.00</label><br>
-                	</div>
-                    <div class="category">
-                        <label>First Class (Adult):</label>
-                        <select name="FA" class="ticket" id="FA" onchange="seatChange()">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <label class="subtotal" id="subtotalFA">$0.00</label><br>
-                	</div>
-                    <div class="category">
-                        <label>First Class (Child):</label>
-                        <select name="FC" class="ticket" id="FC" onchange="seatChange()">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <label class="subtotal" id="subtotalFC">$0.00</label><br>
-                	</div>
-                    <div class="category">
-                        <label>Beanbag (1 person):</label>
-                        <select name="B1" class="ticket" id="B1" onchange="seatChange()">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <label class="subtotal" id="subtotalB1">$0.00</label><br>
-                	</div>
-                    <div class="category">
-                        <label>Beanbag (2 people):</label>
-                        <select name="B2" class="ticket" id="B2" onchange="seatChange()">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <label class="subtotal" id="subtotalB2">$0.00</label><br>
-                	</div>
-                    <div class="category">
-                        <label>Beanbag (3 children):</label>
-                        <select name="B3" class="ticket" id="B3" onchange="seatChange()">
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
-                        <label class="subtotal" id="subtotalB3">$0.00</label><br>
-                	</div>
+				<?php
+					$label = "Adult:";
+					$name = "SA";
+					include("includes/selects.php");
+					
+					$label = "Concession:";
+					$name = "SP";
+					include("includes/selects.php");
+					
+					$label = "Child:";
+					$name = "SC";
+					include("includes/selects.php");
+					
+					$label = "First Class (Adult):";
+					$name = "FA";
+					include("includes/selects.php");
+					
+					$label = "First Class (Child):";
+					$name = "FC";
+					include("includes/selects.php");
+					
+					$label = "Beanbag (1 person):";
+					$name = "B1";
+					include("includes/selects.php");
+					
+					$label = "Beanbag (2 people):";
+					$name = "B2";
+					include("includes/selects.php");
+					
+					$label = "Beanbad (3children):";
+					$name = "B3";
+					include("includes/selects.php");
+				?>
                     <div id="total"><label>Total:</label> <input type="text" name="price" id="price" value="$0.00" readonly></div>
                     <div id="submit"><input type="submit" value="Submit"></div>
                 </div>

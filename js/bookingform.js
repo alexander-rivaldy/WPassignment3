@@ -1,4 +1,24 @@
 // JavaScript Document
+$(document).ready(function(){
+	var url = "https://jupiter.csit.rmit.edu.au/~e54061/wp/moviesJSON.php"
+	var objects = $.getJSON(url, function(jd) {
+		var movies = [
+			{display: jd["CH"].title, value :"CH"},
+			{display: jd["AC"].title, value :"AC"},
+			{display: jd["AF"].title, value :"AF"},
+			{display: jd["RC"].title, value :"RC"}
+		]
+		for (var i = 0; i < movies.length; i++) {
+			var option = document.createElement("option");
+			option.text = movies[i].display;
+			option.value = movies[i].value;
+			document.getElementById("movie").add(option);
+		}
+		
+	
+})
+})
+
 var bookingForm = document.forms["form"];
 
 var children = [

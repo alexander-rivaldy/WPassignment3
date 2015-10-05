@@ -2,9 +2,13 @@
 <html>
 
 <?php 
+	session_start();
 	$cssFile = "css/index.css";
 	require_once ("includes/header.php"); 
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/indexajax.js"></script>
+
   <div id="main">
     <div id="slider">
       <figure>
@@ -21,23 +25,7 @@
         	<h2>WHAT'S TRENDING</h2>
         </div>
       	<div id="posters">
-            <div class="moviebox">
-              <img src="images/inside-out-poster.jpg" alt="Inside Out"/>
-              <p>Inside Out</p>
-            </div>
-            <div class="moviebox">
-              <img src="images/mission-impossible-poster.jpg" alt="Mission: Impossible - Rogue Nation"/>
-              <p>Mission: Impossible - Rogue Nation</p>
-            </div>
-            <div class="moviebox">
-              <img src="images/the-tribe-poster.jpg" alt="The Tribe"/>
-              <p>The Tribe</p>
-            </div>
-            <div class="moviebox">
-              <img src="images/trainwreck-poster.jpg" alt="Trainwreck"/>
-              <p>Trainwreck</p>
-            </div>
-      	</div>
+		</div>
     </div> 
 
 <?php include("includes/footer.php"); ?>
