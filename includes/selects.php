@@ -16,7 +16,7 @@ echo "
 			<option value='9'>9</option>
 			<option value='10'>10</option>
 		</select>
-		<label class='subtotal' id='subtotalSP'>$0.00</label><br>
+		<label class='subtotal' id='subtotal".$name."'>$0.00</label><br>
 	</div>"
 
 
