@@ -11,7 +11,7 @@ $(document).ready(function(){
 					<img src="+ jd[key].poster +" alt=" + jd[key].title + "/>\
 					<div class='box'>\
 						<div class='infobox'>\
-							<h2>" + jd[key].title + "</h2>\
+							<a href='moviePage.php?id="+key+"'><h2>" + jd[key].title + "</h2></a>\
 							<h6>PG | 94 min | Children</h6>\
 							<p>" + jd[key].summary + "</p>\
 						</div>\
@@ -47,7 +47,7 @@ $(document).ready(function(){
 							</details>\
 						</div>\
 					</div>\
-					<a href='tickets.php'>Book Tickets</a>\
+					<a id='book' href='tickets.php'>Book Tickets</a>\
 				</div>\
 			</div>");
 		loop++;
