@@ -11,15 +11,16 @@ echo '
 
 <body>
 <div class="container">
-  <header>
-  	<p><a href="index.php"><img src="images/silverado(1).png" alt="Silverado Cinemas"/></a></p>
-  </header>
-  <nav>
+  <div id="header">
+  	<a href="index.php"><img src="images/silverado(1).png" id="logo" alt="Silverado Cinemas"/></a>
+  </div>
+  <div id="nav">
   	<ul>
       <li id="movies"><a href="movies.php">Movies</a></li>
       <li id="tickets"><a href="tickets.php">Tickets</a></li>
       <li id="contact"><a href="contact.php">Contact</a></li>
       <li id="about"><a href="about.php">About</a></li>
+      <li id="cart"><a href="cart.php">(0)<img src="images/cart(1).png" class="cart" alt="Menu"/></a>
     </ul>
-  </nav>'
+  </div>'
 ?>

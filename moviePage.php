@@ -29,7 +29,7 @@
 						<img src="+movie[type].rating+" alt= 'Rating'/>\
 						<p>" + movie[type].summary + "</p>\
 					</div>\
-					<video id='trailer'><source src="+movie[type].trailer+" type='video/mp4'><video>\
+					<video id='trailer'><source src="+movie[type].trailer+" type='video/mp4'></video>\
 					<div class='moreinfo'>\
 						<details>\
 							<summary>More Info</summary>\
