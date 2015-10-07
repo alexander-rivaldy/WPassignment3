@@ -18,6 +18,4 @@ echo "
 		</select>
 		<label class='subtotal' id='subtotal".$name."'>$0.00</label><br>
 	</div>"
-
-
 ?>
