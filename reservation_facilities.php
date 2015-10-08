@@ -2,7 +2,7 @@
 <html>
 <head>
 <?php
-	if (isset($_POST))
+	if (isset($_POST) && !empty($_POST))
 	{
 		$movie = $_POST["movie"];
 		$day = $_POST["day"];
@@ -19,7 +19,7 @@
 	</header>
 	<main>
 		<?php 
-			echo "<p>".$_SESSION['reservation']['movie']."</p>";
+			echo "<p>".print_r($_SESSION)."</p>";
 		?>
 		<form action="" method="POST">
 		  Movie:<select name="movie">

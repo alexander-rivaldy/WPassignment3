@@ -3,43 +3,43 @@
 $(document).ready(function(){
 	var url = "https://jupiter.csit.rmit.edu.au/~e54061/wp/moviesJSON.php";
 	
-	var movies = $.getJSON(url, function(jd) {
+	var movies = $.getJSON(url, function(movies) {
 		var loop = parseInt(0);
-		$.each(jd, function(key,value) {
+		$.each(movies, function(type,value) {
 		$(".main").append("\
 				<div class='moviebox'>\
-					<img src="+ jd[key].poster +" alt=" + jd[key].title + "/>\
+					<img src="+ movies[type].poster +" alt=" + movies[type].title + "/>\
 					<div class='box'>\
 						<div class='infobox'>\
-							<a href='moviePage.php?id="+key+"'><h2>" + jd[key].title + "</h2></a>\
-							<h6>PG | 94 min | Children</h6>\
-							<p>" + jd[key].summary + "</p>\
+							<a href='moviePage.php?id="+type+"'><h2>" + movies[type].title + "</h2></a>\
+							<img src="+movies[type].rating+" alt= 'Rating'/>\
+							<p>" + movies[type].summary + "</p>\
 						</div>\
 						<div class='moreinfo'>\
 							<details>\
 								<summary>More Info</summary>\
-								<p>" + jd[key].description + "</p>\
+								<p>" + movies[type].description + "</p>\
 								<div class='sessions'>\
 									<h3>Session Times:</h3>");
-		if((jd[key].screenings).hasOwnProperty("Monday"))
+		if((movies[type].screenings).hasOwnProperty("Monday"))
 		{
 			$(".sessions:eq("+loop+")").append("\
 									<div class='session'>\
-										<p>Mon - Tue: "+jd[key].screenings.Monday+"</p>\
+										<p>Mon - Tue: "+movies[type].screenings.Monday+"</p>\
 									</div>")
 		}
-		if((jd[key].screenings).hasOwnProperty("Wednesday"))
+		if((movies[type].screenings).hasOwnProperty("Wednesday"))
 		{
 			$(".sessions:eq("+loop+")").append("\
 									<div class='session'>\
-										<p>Wed - Fri: "+jd[key].screenings.Wednesday+"</p>\
+										<p>Wed - Fri: "+movies[type].screenings.Wednesday+"</p>\
 									</div>")
 		}
-		if((jd[key].screenings).hasOwnProperty("Saturday"))
+		if((movies[type].screenings).hasOwnProperty("Saturday"))
 		{
 			$(".sessions:eq("+loop+")").append("\
 									<div class='session'>\
-										<p>Sat - Sun: "+jd[key].screenings.Saturday+"</p>\
+										<p>Sat - Sun: "+movies[type].screenings.Saturday+"</p>\
 									</div>")
 		}
 		$(".infobox:eq("+loop+")").append("\

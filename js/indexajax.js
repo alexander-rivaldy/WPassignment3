@@ -5,8 +5,10 @@ $(document).ready(function(){
 		$.each(objects, function(key,value) {
 			$("#posters").append("\
 				<div class='moviebox'>\
-				  <img src="+objects[key].poster+" alt="+objects[key].title+"/>\
-				  <p>"+objects[key].title+"</p>\
+					<a href='moviePage.php?id="+key+"'>\
+						<img src="+objects[key].poster+" alt="+objects[key].title+"/>\
+						<p>"+objects[key].title+"</p>\
+					</a>\
 				</div>\
 			")
 		})

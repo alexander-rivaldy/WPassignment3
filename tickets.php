@@ -2,6 +2,7 @@
 <html>
 
 <?php 
+session_start();
 	$cssFile = "css/tickets.css";
 	require_once ("includes/header.php");
 ?>
@@ -32,7 +33,7 @@
             </div>
         </div>
         <div id="bookingform">
-        	<form action="http://titan.csit.rmit.edu.au/~e54061/wp/testbooking.php" method="post" id="form">
+        	<form action="cart.php" method="post" id="form">
                 <div id="movieinfo">
                     <div class="category">
                         <label>Movie Title:</label>
