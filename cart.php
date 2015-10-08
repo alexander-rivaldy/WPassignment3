@@ -3,6 +3,7 @@
 <?php 
 	session_start();
 	$cssFile = "css/movies.css";
+	print_r($_POST);
 	
 	$movie="";
 	$day="";
@@ -26,6 +27,7 @@
 		
 		$reservation = array('movie'=>$movie,'day'=>$day, 'time'=>$time);
 		$_SESSION['cart']['screenings'] = $reservation;
+
 	}
 	
 	require_once ("includes/header.php");

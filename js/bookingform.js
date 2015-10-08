@@ -214,7 +214,7 @@ function calculateTotal(prices) {
 		var category = prices[i].category;
 		var selectedAmount = document.getElementById(category).value;
 		var subtotal = prices[i].value * parseInt(selectedAmount);
-		document.getElementById("subtotal"+category).innerHTML = "$" + parseFloat(subtotal).toFixed(2);
+		document.getElementById("subtotal"+category).innerHTML =parseFloat(subtotal).toFixed(2);
 		
 		totalPrice += subtotal;
 	}
@@ -231,7 +231,7 @@ function resetTotal(prices) {
 		document.getElementById(category).selectedIndex = 0;
 
 		var subtotal = 0;
-		document.getElementById("subtotal"+category).innerHTML = "$" + parseFloat(subtotal).toFixed(2);
+		document.getElementById("subtotal"+category).innerHTML = parseFloat(subtotal).toFixed(2);
 		
 		document.getElementById("price").value = "$" + parseFloat(totalPrice).toFixed(2);
 	}
