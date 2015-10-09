@@ -188,7 +188,7 @@
 		width: 100px;
 	}
 	
-	#voucherbox button {
+	#voucherbox #apply {
 		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-weight: bold; 
 		color: #FFF;
@@ -399,7 +399,7 @@
 		display: inline;
 	}
 	
-	#voucherbox button {
+	#voucherbox #apply {
 		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-weight: bold; 
 		color: #FFF;
@@ -601,7 +601,7 @@
 		display: inline;
 	}
 	
-	#voucherbox button {
+	#voucherbox #apply {
 		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-weight: bold; 
 		color: #FFF;
@@ -802,7 +802,7 @@
 		display: inline;
 	}
 	
-	#voucherbox button {
+	#voucherbox #apply {
 		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-weight: bold; 
 		color: #FFF;
