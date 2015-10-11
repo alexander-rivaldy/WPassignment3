@@ -5,11 +5,16 @@
 	//session_destroy();
 	
 	print_r($_POST);
+	
 	$movie="";
 	$day="";
 	$time="";
 	$reservation="";
-	
+	if(isset($_POST['voucher']) && !empty($_POST['voucher']))
+	{
+		$voucher = $_POST['voucher'];
+		unset($_POST);
+	}
 	if(isset($_GET['deletekey']) && !empty($_GET['deletekey']))
 	{
 		if($_GET['deletekey'] == "all")
@@ -71,9 +76,7 @@
 						return $price;
 					}
 				}
-			elseIf($day == 'Saturday' || $day == 'Sunday' 
-			       || $day == 'Wednesday' || $day == 'Thursday' 
-				   || $day == 'Friday')
+			else
 			{
 				if($ticket == 'SA')
 					{
@@ -184,6 +187,7 @@
 		{
 		$_SESSION['cart']['screenings'][] = $reservation;
 		}
+		$_SESSION['total'] = $total;
 	
 	}
 	
@@ -291,22 +295,41 @@
 					<div id='infobox'>
 						<div id='label'>
 							<h6>TOTAL:</h6>";
-				if(isset($_SESSION['voucher']) && !empty($_SESSION['voucher']))
+			if ((isset($_SESSION['voucher']) && !empty($_SESSION['voucher']) ) 
+				|| ( isset($voucher)  ))
 				{
-					echo"
-							<h6>Meal and Movie Deal Voucher (12345-67890-ZI):</h6>
+					$letters = array("A", "B", "C", "D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z");
+					
+					$checkOne = ((($voucher[0]*$voucher[1]+$voucher[2])*$voucher[3]+$voucher[4])%26);
+					
+					$checkTwo = ((($voucher[6]*$voucher[7]+$voucher[8])*$voucher[9]+$voucher[10])%26);
+					
+					if($voucher[12] == $letters[$checkOne] && $voucher[13] == $letters[$checkTwo])
+					{
+						$_SESSION['voucher'] = $voucher;
+						$_SESSION['grand-total'] = $_SESSION['total'] * 0.8 ;
+						//also expected to give users a 20% discount on their price???
+						echo"
+							<h6>Meal and Movie Deal Voucher (".$voucher."):</h6>
 							<h3>GRAND TOTAL:</h3>";
+					}
+					else
+					{
+						echo "Ticket is INVALID!!!";
+					}
+					
+					
 				}
 				echo
 						"
 						</div>
 						<div id='value'>
-							<h6>$119.00</h6>";
+							<h6>$".$_SESSION['total']."</h6>";
 				if(isset($_SESSION['voucher']) && !empty($_SESSION['voucher']))
 				{
 					echo"
 							<h6>20%</h6>
-							<h3><span id='grandtotal'>$95.20</h3>";
+							<h3><span id='grandtotal'>$".$_SESSION['grand-total']."</h3>";
 				}
 				echo"
 						</div>
