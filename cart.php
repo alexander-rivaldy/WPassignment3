@@ -13,6 +13,17 @@
 	if(isset($_POST['voucher']) && !empty($_POST['voucher']))
 	{
 		$voucher = $_POST['voucher'];
+		$letters = array("A", "B", "C", "D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z");
+		
+		$checkOne = ((($voucher[0]*$voucher[1]+$voucher[2])*$voucher[3]+$voucher[4])%26);
+		
+		$checkTwo = ((($voucher[6]*$voucher[7]+$voucher[8])*$voucher[9]+$voucher[10])%26);
+		
+		if($voucher[12] == $letters[$checkOne] && $voucher[13] == $letters[$checkTwo])
+		{
+			$_SESSION['voucher'] = $voucher;
+			$_SESSION['grand-total'] = $_SESSION['total'] * 0.8 ;
+		}
 		unset($_POST);
 	}
 	if(isset($_GET['deletekey']) && !empty($_GET['deletekey']))
@@ -285,7 +296,7 @@
 						echo "
 							</ul>
 						</div>
-						<h3>Subtotal: $<span class='subtotal'>".$value['subtotal']."</span></h3>
+						<h3>Subtotal: <span class='subtotal'>$".$value['subtotal']."</span></h3>
 						<a href='cart.php?deletekey=".$key."'>Delete from Cart</a>
 					</div>
 						";
@@ -295,28 +306,14 @@
 					<div id='infobox'>
 						<div id='label'>
 							<h6>TOTAL:</h6>";
-			if ((isset($_SESSION['voucher']) && !empty($_SESSION['voucher']) ) 
-				|| ( isset($voucher)  ))
+				if (isset($_SESSION['voucher']) && !empty($_SESSION['voucher']) ) 
 				{
-					$letters = array("A", "B", "C", "D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z");
 					
-					$checkOne = ((($voucher[0]*$voucher[1]+$voucher[2])*$voucher[3]+$voucher[4])%26);
+					//also expected to give users a 20% discount on their price???
+					echo"
+						<h6>Meal and Movie Deal Voucher (".$_SESSION['voucher']."):</h6>
+						<h3>GRAND TOTAL:</h3>";
 					
-					$checkTwo = ((($voucher[6]*$voucher[7]+$voucher[8])*$voucher[9]+$voucher[10])%26);
-					
-					if($voucher[12] == $letters[$checkOne] && $voucher[13] == $letters[$checkTwo])
-					{
-						$_SESSION['voucher'] = $voucher;
-						$_SESSION['grand-total'] = $_SESSION['total'] * 0.8 ;
-						//also expected to give users a 20% discount on their price???
-						echo"
-							<h6>Meal and Movie Deal Voucher (".$voucher."):</h6>
-							<h3>GRAND TOTAL:</h3>";
-					}
-					else
-					{
-						echo "Ticket is INVALID!!!";
-					}
 					
 					
 				}
