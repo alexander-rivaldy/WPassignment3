@@ -2,6 +2,7 @@
 <html>
 
 <?php 
+	session_start();
 	$cssFile = "css/about.css";
 	require_once ("includes/header.php");
 ?>
@@ -20,9 +21,22 @@
                     <h3>Mon - Tue</h3>
                 </div>
                 <p>
-                1 PM: Inside Out<br>
-                6 PM: The Tribe<br>
-                9 PM: Trainwreck
+				<?php
+					$url = "https://".$_SERVER['SERVER_NAME']."/~e54061/wp/moviesJSON.php";
+					$content = file_get_contents($url);
+					$movies = json_decode($content, true);
+					foreach($movies as $key => $value)
+					{
+						foreach($value['screenings'] as $day =>$time)
+						{
+							if($day == "Monday" )
+							{
+								echo $time.": ".$movies[$key]['title']."<br>";
+								continue;
+							}
+						}
+					}
+				?>
                 </p>
             </div>
             <div class="box">
@@ -30,21 +44,40 @@
                     <h3>Wed - Fri</h3>
                 </div>
                 <p>
-                1 PM: Trainwreck<br>
-                6 PM: Inside Out<br>
-                9 PM: Mission Impossible - Rogue Nation
+				<?php
+					foreach($movies as $key => $value)
+					{
+						foreach($value['screenings'] as $day =>$time)
+						{
+							if($day == "Wednesday" )
+							{
+								echo $time.": ".$movies[$key]['title']."<br>";
+								continue;
+							}
+						}
+					}
+				?>
                 </p>
             </div>
             <div class="box">
                 <div class="day">
                     <h3>Sat - Sun</h3>
                 </div>
-                <p>
-                12 PM: Inside Out<br>
-                3 PM: The Tribe<br>
-                6 PM: Trainwreck<br>
-                9 PM: Mission Impossible - Rogue Nation
-                </p>
+				<p>
+                <?php
+					foreach($movies as $key => $value)
+					{
+						foreach($value['screenings'] as $day =>$time)
+						{
+							if($day == "Saturday" )
+							{
+								echo $time.": ".$movies[$key]['title']."<br>";
+								continue;
+							}
+						}
+					}
+				?>
+				</p>
             </div>
         </div>
         <div id="prices">

@@ -2,6 +2,7 @@
 <html>
 
 <?php 
+	session_start();
 	$cssFile = "css/contact.css";
 	require_once ("includes/header.php");
 ?>

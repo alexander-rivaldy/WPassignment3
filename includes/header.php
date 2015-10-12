@@ -1,4 +1,12 @@
 <?php
+$cartItem = (int)0;
+if(isset($_SESSION) && !empty($_SESSION))
+{
+	foreach($_SESSION['cart']['screenings'] as $value)
+	{
+		++$cartItem;
+	}
+}
 echo '
 <head>
 	<meta charset="UTF-8">
@@ -20,7 +28,7 @@ echo '
       <li id="tickets"><a href="tickets.php">Tickets</a></li>
       <li id="contact"><a href="contact.php">Contact</a></li>
       <li id="about"><a href="about.php">About</a></li>
-      <li id="cart"><a href="cart.php">(0)<img src="images/cart(1).png" class="cart" alt="Menu"/></a>
+      <li id="cart"><a href="cart.php">('.$cartItem.')<img src="images/cart(1).png" class="cart" alt="Menu"/></a>
     </ul>
   </div>'
 ?>

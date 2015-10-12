@@ -4,8 +4,10 @@
 	session_start();
 	//session_destroy();
 	
-	print_r($_POST);
-	
+	print_r($_SESSION);
+	echo "<pre>";
+		print_r($_SESSION);
+		echo "</pre>";
 	$movie="";
 	$day="";
 	$time="";
@@ -56,10 +58,9 @@
 		
 		function calcPrice($movie, $day, $time, $ticket)
 		{
+			echo "TIME: ".$time."   DAY: ".$day;
 				if($day == 'Monday' || $day == 'Tuesday'
-				   || ($day == 'Wednesday' && $time = "01:00 PM") 
-				   || ($day == 'Thursday' && $time = "01:00 PM") 
-				   || ($day == 'Friday' && $time = "01:00 PM"))
+				   || ($time == '01:00 PM' && $day != 'Saturday' && $day != 'Sunday'))
 				{
 					if($ticket == 'SA')
 					{
@@ -167,7 +168,6 @@
 		foreach($seats as $value)
 		{
 			$subtotal += $value['price'] * $value['quantity'];
-			$total += $subtotal;
 		}
 		
 		$reservation = array('movie'=>$movie,
@@ -196,7 +196,11 @@
 		}
 		if($loop == (int)0)
 		{
-		$_SESSION['cart']['screenings'][] = $reservation;
+			$_SESSION['cart']['screenings'][] = $reservation;
+		}
+		foreach($_SESSION['cart']['screenings'] as $value)
+		{
+			$total += $value['subtotal'];
 		}
 		$_SESSION['total'] = $total;
 	
@@ -210,6 +214,9 @@
 			<script>
 				$(document).ready(function(){
 					document.getElementById("empty").onclick = function(){ location.href="cart.php?deletekey=all" ;};
+					document.getElementById("checkout").onclick = function(){ 
+						document.getElementById("customerdetails").style.display="inline-block";
+					};
 				});
 				
 			</script>
@@ -345,7 +352,7 @@
 				}
 				echo"
 					<div id='buttons'>
-						<button type='button'>Checkout</button>
+						<button type='button' id='checkout'>Checkout</button>
 						<button type='button' id='empty'>Empty Cart</button>
 					</div>
 				</div>
@@ -358,8 +365,39 @@
 						</div>
 					";
 				}
+				
 		  ?>
-		
+		<div id='customerdetails'>
+			<h2>CUSTOMER DETAILS</h2>
+			<h6>Please enter your customer details to complete checkout.</h6>
+			<form action='' method='post'>
+				<div class='label'>
+					<label>First Name</label>
+					<input type='text' name='firstname' pattern="[a-zA-Z.'- ]*{1}[a-zA-Z.'-]*$ "
+					title="Name must only contain letters and some special characters such as ' . -" required><br>
+				</div>
+				
+				<div class='label'>
+					<label>Last Name</label>
+					<input type='text' name='lastname' pattern="[a-zA-Z.'- ]*{1}[a-zA-Z.'-]*$ "
+					title="Name must only contain letters and some special characters such as ' . -" required><br>
+				</div>
+				
+				<div class='label'>
+					<label>Phone Number</label>
+					<input type='text' name='phonenumber' pattern="^((04)|\+614|04){1}[ ]?\d{4}[ ]?\d{4}$" 
+				title="Australian Mobile Phone numbers must only contain digits " required><br>
+				</div>
+				
+				<div class='label'>
+					<label>Email Address</label>
+					<input type='email' name='email' pattern="^[a-zA-Z0-9.-_]*@[a-zA-Z]*.(edu|com|org)*(.au){0,1}$" 
+				title="Please enter a valid E-mail address. E.g john_Smith@abcd.com.au" required><br>
+				</div>
+				
+				<div id='submit'><input type='submit' value='Submit'></div>
+			</form>
+		  </div>
 	</div>
 
 

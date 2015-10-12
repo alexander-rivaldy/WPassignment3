@@ -2,11 +2,9 @@
 <html>
 
 <?php 
-session_start();
+	session_start();
 	$cssFile = "css/tickets.css";
 	require_once ("includes/header.php");
-	
-	
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="js/bookingform.js"></script>
