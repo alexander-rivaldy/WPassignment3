@@ -67,7 +67,7 @@
 							echo sprintf('%0.2f', $value['subtotal']);
 					echo"</h3>
 					</div>
-					<a href=''> Print Tickets</a>
+					<a href='javascript:window.print()'> Print Tickets</a>
 				</div>
 				<div class='ticketbox'>
 					<div class='tickets'>
