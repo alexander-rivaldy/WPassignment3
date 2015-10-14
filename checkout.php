@@ -165,13 +165,28 @@
 			echo"
 				</div>
 			</div>
+			<div id='grandtotal'>
+				<div id='label'>";
+			if(isset($_SESSION['voucher']))
+			{
+				echo "<h6>Meal and Movie Deal Voucher (".$_SESSION['voucher']."):</h6>";
+			}
+			echo"
+						<h6>GRAND TOTAL:</h6>
+					</div>
+					<div id='value'>";
+			if(isset($_SESSION['voucher']))
+			{
+				echo "<h6>20%</h6>";
+			}
+			echo"
+					<h6><span class='total'>$".sprintf('%0.2f', $_SESSION['grand-total'])."</h6>
+				</div>
+			  </div>
 			";
 		}
 		
 	?>
-	<div id="subheader">
-		<h3>GRAND TOTAL: <?php echo $_SESSION['grand-total']; ?></h3>
-	</div>
 </div>
 	
 

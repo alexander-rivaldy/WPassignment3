@@ -192,9 +192,6 @@
 					++$loop;
 				}
 			}
-			echo "<pre>";
-		print_r($_SESSION);
-		echo "</pre>";
 		}
 		
 		if($loop == (int)0 && isset($_POST['movie']) && !empty($_POST['movie']))
@@ -209,12 +206,6 @@
 		
 		if(!isset($_SESSION['voucher']))
 			$_SESSION['grand-total'] = $total;
-			
-		
-		
-		
-		
-	
 	}
 	
 	if(isset($_SESSION) && !empty($_SESSION))
