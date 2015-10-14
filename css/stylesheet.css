@@ -18,7 +18,7 @@
 		background-color: #D8D8D8;
 	}
 	
-	#header {
+	header {
 		background-color: #252525;
 	}
 
@@ -36,7 +36,7 @@
 		color: #9C9C9C;
 	}
 	
-	#nav ul li a {
+	nav ul li a {
 		font-family: Expletus Sans;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
@@ -56,7 +56,7 @@
 		background-color: #921719;
 	}
 	
-	#footer {
+	footer {
 		position: relative;
 		background: #252525;
 		margin-bottom: 0;
@@ -76,7 +76,7 @@
 		margin-right: auto;
 	}
 
-	#header {
+	header {
 		text-align: left;
 		color: #FFFFFF;
 		height: 80px;
@@ -95,7 +95,7 @@
 		
 	}
 	
-	#nav {
+	nav {
 		position: relative;
 		background-color: #FFF;
 		padding: 1%;
@@ -103,19 +103,19 @@
 		font-size: 0.6em;
 	}
 	
-	#nav ul {
+	nav ul {
 		display: block;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 	}
 	
-	#nav ul li {
+	nav ul li {
 		padding: 0 2%;
 		display: inline;
 	}
 
-	#footer {
+	footer {
 		padding: 3%;
 		text-align: center;
 		margin-top: 3.5%;
@@ -132,7 +132,7 @@
 		margin-right: auto;
 	}
 
-	#header {
+	header {
 		text-align: left;
 		color: #FFFFFF;
 		height: 100px;
@@ -151,7 +151,7 @@
 		
 	}
 
-	#nav {
+	nav {
 		position: relative;
 		background-color: #FFF;
 		padding: 1%;
@@ -159,19 +159,19 @@
 		font-size: 0.75em;
 	}
 	
-	#nav ul {
+	nav ul {
 		display: block;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 	}
 	
-	#nav ul li {
+	nav ul li {
 		padding: 0 3.5%;
 		display: inline;
 	}
 	
-	#footer {
+	footer {
 		padding: 3%;
 		margin-top: 3.5%;
 		text-align: center;
@@ -188,7 +188,7 @@
 		margin-right: auto;
 	}
 
-	#header {
+	header {
 		text-align: left;
 		color: #FFFFFF;
 		height: 120px;
@@ -207,7 +207,7 @@
 		
 	}
 
-	#nav {
+	nav {
 		position: relative;
 		background-color: #FFF;
 		padding: 1%;
@@ -216,19 +216,19 @@
 	}
 	
 	
-	#nav ul {
+	nav ul {
 		display: block;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 	}
 	
-	#nav ul li {
+	nav ul li {
 		padding: 0 5%;
 		display: inline;
 	}
 	
-	#footer {
+	footer {
 		padding: 1%;
 		margin-top: 1.5%;
 		text-align: right;
@@ -245,7 +245,7 @@
 		margin-right: auto;
 	}
 
-	#header {
+	header {
 		text-align: left;
 		color: #FFFFFF;
 		height: 150px;
@@ -264,7 +264,7 @@
 		
 	}
 	
-	#nav {
+	nav {
 		position: relative;
 		background-color: #FFF;
 		padding: 1%;
@@ -272,19 +272,19 @@
 		font-size: 0.85em;
 	}
 	
-	#nav ul {
+	nav ul {
 		display: block;
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 	}
 	
-	#nav ul li {
+	nav ul li {
 		padding: 0 5%;
 		display: inline;
 	}
 	
-	#footer {
+	footer {
 		padding: 1%;
 		margin-top: 1.5%;
 		text-align: right;

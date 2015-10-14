@@ -158,6 +158,51 @@
 		text-align: right;
 		width: 35%;
 	}
+
+	#grandtotal {
+		width: 97%;
+		position: relative;
+		margin: 0.5% 0;
+		padding: 1.5%;
+		display: inline-block;
+		background-color: #FFF;
+	}
+	
+	#grandtotal h6 {
+		font-size: 0.6em;
+		color: #696969;
+		margin: 0;
+		padding: 0;
+		letter-spacing: 0.12em;
+		margin-top: 0.75%;
+		text-transform: uppercase;
+		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif
+	}
+	
+	#label {
+		display: inline-block;
+		width: 85%;
+		text-align: right;
+		vertical-align: middle;
+	}
+	
+	#value {
+		display: inline-block;
+		width: 12%;
+		text-align: left;
+		vertical-align: middle;
+		margin-left: 1%;
+	}
+	
+	#label h6 {
+		margin: 2% 0;
+		font-weight: lighter;
+	}
+	
+	#value h6 {
+		margin: 25% 0;
+		font-weight: bold;
+	}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -312,6 +357,51 @@
 		text-align: right;
 		width: 35%;
 	}
+
+	#grandtotal {
+		width: 97%;
+		position: relative;
+		margin: 0.5% 0;
+		padding: 1.5%;
+		display: inline-block;
+		background-color: #FFF;
+	}
+	
+	#grandtotal h6 {
+		font-size: 0.8em;
+		color: #696969;
+		margin: 0;
+		padding: 0;
+		letter-spacing: 0.12em;
+		margin-top: 0.75%;
+		text-transform: uppercase;
+		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif
+	}
+	
+	#label {
+		display: inline-block;
+		width: 85%;
+		text-align: right;
+		vertical-align: middle;
+	}
+	
+	#value {
+		display: inline-block;
+		width: 12%;
+		text-align: left;
+		vertical-align: middle;
+		margin-left: 1%;
+	}
+	
+	#label h6 {
+		margin: 2% 0;
+		font-weight: lighter;
+	}
+	
+	#value h6 {
+		margin: 25% 0;
+		font-weight: bold;
+	}
 	
 }
 
@@ -463,6 +553,52 @@
 		text-align: right;
 		width: 35%;
 	}
+
+	#grandtotal {
+		width: 97%;
+		position: relative;
+		margin: 0.5% 0;
+		padding: 1.5%;
+		display: inline-block;
+		background-color: #FFF;
+	}
+	
+	#grandtotal h6 {
+		font-size: 0.9em;
+		color: #696969;
+		margin: 0;
+		padding: 0;
+		letter-spacing: 0.12em;
+		margin-top: 0.75%;
+		text-transform: uppercase;
+		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif
+	}
+	
+	#label {
+		display: inline-block;
+		width: 87%;
+		text-align: right;
+		vertical-align: middle;
+	}
+	
+	#value {
+		display: inline-block;
+		width: 10%;
+		text-align: left;
+		vertical-align: middle;
+		margin-left: 1%;
+	}
+	
+	#label h6 {
+		margin: 2% 0;
+		font-weight: lighter;
+	}
+	
+	#value h6 {
+		margin: 25% 0;
+		font-weight: bold;
+	}
+	
 }
 
 @media only screen and (min-width: 1000px) {
@@ -613,10 +749,56 @@
 		width: 35%;
 	}
 	
+	#grandtotal {
+		width: 97%;
+		position: relative;
+		margin: 0.5% 0;
+		padding: 1.5%;
+		display: inline-block;
+		background-color: #FFF;
+	}
+	
+	#grandtotal h6 {
+		font-size: 1em;
+		color: #696969;
+		margin: 0;
+		padding: 0;
+		letter-spacing: 0.12em;
+		margin-top: 0.75%;
+		text-transform: uppercase;
+		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif
+	}
+	
+	#label {
+		display: inline-block;
+		width: 87%;
+		text-align: right;
+		vertical-align: middle;
+	}
+	
+	#value {
+		display: inline-block;
+		width: 10%;
+		text-align: left;
+		vertical-align: middle;
+		margin-left: 1%;
+	}
+	
+	#label h6 {
+		margin: 2% 0;
+		font-weight: lighter;
+	}
+	
+	#value h6 {
+		margin: 25% 0;
+		font-weight: bold;
+	}
+	
+
 }
 
 @media print {
-	#header, #nav, #footer {
+	header, nav, footer {
 		display: none;
 	}
 	
@@ -767,4 +949,50 @@
 		text-align: right;
 		width: 35%;
 	}
+
+	#grandtotal {
+		width: 97%;
+		position: relative;
+		margin: 0.5% 0;
+		padding: 1.5%;
+		display: inline-block;
+		background-color: #FFF;
+	}
+	
+	#grandtotal h6 {
+		font-size: 1em;
+		color: #696969;
+		margin: 0;
+		padding: 0;
+		letter-spacing: 0.12em;
+		margin-top: 0.75%;
+		text-transform: uppercase;
+		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif
+	}
+	
+	#label {
+		display: inline-block;
+		width: 87%;
+		text-align: right;
+		vertical-align: middle;
+	}
+	
+	#value {
+		display: inline-block;
+		width: 10%;
+		text-align: left;
+		vertical-align: middle;
+		margin-left: 1%;
+	}
+	
+	#label h6 {
+		margin: 2% 0;
+		font-weight: lighter;
+	}
+	
+	#value h6 {
+		margin: 25% 0;
+		font-weight: bold;
+	}
+	
 }
