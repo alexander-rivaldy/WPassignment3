@@ -163,8 +163,7 @@
 			</div>
 			";
 		}
-		unset($_SESSION);
-		session_destroy();
+		
 	?>
 	<div id="subheader">
 		<h3>GRAND TOTAL: <?php echo $_SESSION['grand-total']; ?></h3>
@@ -173,5 +172,7 @@
 	
 
 <?php
+unset($_SESSION);
+		session_destroy();
 	require_once("includes/footer.php");
 ?>
