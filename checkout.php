@@ -9,8 +9,12 @@
 	}
 	$cssFile = "css/checkout.css";
 	require_once("includes/header.php");
+	$json = file_get_contents("tmp/customerdata.json");
+	if(json_decode($json, true) != NULL)
+		$datas = json_decode($json, true);
+	$datas[] = $_SESSION;
 	
-	file_put_contents('tmp/customerdata.json', json_encode($_SESSION))
+	file_put_contents('tmp/customerdata.json', json_encode($datas))
 ?>
 <link href='https://fonts.googleapis.com/css?family=Expletus+Sans:400,700,600,500' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
