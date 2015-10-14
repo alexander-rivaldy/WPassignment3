@@ -109,9 +109,13 @@
 		margin: 0;
 		padding: 0;
 	}
-	
+
 	nav ul li {
 		padding: 0 2%;
+	}
+
+	nav ul li {
+		padding: 0 4%;
 		display: inline;
 	}
 
@@ -168,6 +172,10 @@
 	
 	nav ul li {
 		padding: 0 3.5%;
+	}
+	
+	nav ul li {
+		padding: 0 4.5%;
 		display: inline;
 	}
 	

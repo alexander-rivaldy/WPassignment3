@@ -4,14 +4,6 @@
 	session_start();
 	//session_destroy();
 	
-	print_r($_SESSION);
-	echo "<pre>";
-		print_r($_SESSION);
-		echo "</pre>";
-	$movie="";
-	$day="";
-	$time="";
-	$reservation="";
 	if(isset($_POST['voucher']) && !empty($_POST['voucher']))
 	{
 		$voucher = $_POST['voucher'];
@@ -24,10 +16,22 @@
 		if($voucher[12] == $letters[$checkOne] && $voucher[13] == $letters[$checkTwo])
 		{
 			$_SESSION['voucher'] = $voucher;
-			$_SESSION['grand-total'] = $_SESSION['total'] * 0.8 ;
+			$_SESSION['grand-total'] = $_SESSION['total'] * (double)0.8 ;
 		}
+		else
+		{
+			echo "
+			<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+			<script>
+			$(document).ready(function(){
+				alert('voucher ".$voucher." is invalid!!!') ;
+			})
+			</script>";
+		}
+		
 		unset($_POST);
 	}
+	
 	if(isset($_GET['deletekey']) && !empty($_GET['deletekey']))
 	{
 		if($_GET['deletekey'] == "all")
@@ -43,7 +47,6 @@
 	{
 		//movie details
 		if(isset($_POST['movie'] ) && !empty($_POST['movie'] ) )
-		if(isset($_POST['movie'] ) && !empty($_POST['movie'] ) )
 		{
 			$movie = $_POST['movie'];
 		}
@@ -58,7 +61,6 @@
 		
 		function calcPrice($movie, $day, $time, $ticket)
 		{
-			echo "TIME: ".$time."   DAY: ".$day;
 				if($day == 'Monday' || $day == 'Tuesday'
 				   || ($time == '01:00 PM' && $day != 'Saturday' && $day != 'Sunday'))
 				{
@@ -194,7 +196,8 @@
 		print_r($_SESSION);
 		echo "</pre>";
 		}
-		if($loop == (int)0)
+		
+		if($loop == (int)0 && isset($_POST['movie']) && !empty($_POST['movie']))
 		{
 			$_SESSION['cart']['screenings'][] = $reservation;
 		}
@@ -203,6 +206,14 @@
 			$total += $value['subtotal'];
 		}
 		$_SESSION['total'] = $total;
+		
+		if(!isset($_SESSION['voucher']))
+			$_SESSION['grand-total'] = $total;
+			
+		
+		
+		
+		
 	
 	}
 	
@@ -315,14 +326,9 @@
 							<h6>TOTAL:</h6>";
 				if (isset($_SESSION['voucher']) && !empty($_SESSION['voucher']) ) 
 				{
-					
-					//also expected to give users a 20% discount on their price???
 					echo"
 						<h6>Meal and Movie Deal Voucher (".$_SESSION['voucher']."):</h6>
 						<h3>GRAND TOTAL:</h3>";
-					
-					
-					
 				}
 				echo
 						"
@@ -345,7 +351,8 @@
 					<div id='voucherbox'>
 						<h6>VOUCHER CODE:</h6>
 						<form action='cart.php' method='post'>
-							<input type='text' name='voucher' id='voucher'>
+							<input type='text' name='voucher' id='voucher' pattern='^\d{5}[-]\d{5}-[A-Z]{2}$'
+							title='the voucher format should be 5 digits - 5 digits - 2 uppercase char, eg: 12345-67890-AA'>
 							<input type ='submit' value='Apply' id='apply'>
 						</form>
 					</div>";
@@ -370,16 +377,16 @@
 		<div id='customerdetails'>
 			<h2>CUSTOMER DETAILS</h2>
 			<h6>Please enter your customer details to complete checkout.</h6>
-			<form action='' method='post'>
+			<form action='checkout.php' method='post'>
 				<div class='label'>
 					<label>First Name</label>
-					<input type='text' name='firstname' pattern="[a-zA-Z.'- ]*{1}[a-zA-Z.'-]*$ "
+					<input type='text' name='firstname' pattern="^[a-zA-Z.']{1,}$"
 					title="Name must only contain letters and some special characters such as ' . -" required><br>
 				</div>
 				
 				<div class='label'>
 					<label>Last Name</label>
-					<input type='text' name='lastname' pattern="[a-zA-Z.'- ]*{1}[a-zA-Z.'-]*$ "
+					<input type='text' name='lastname' pattern="^[a-zA-Z.']{1,}$"
 					title="Name must only contain letters and some special characters such as ' . -" required><br>
 				</div>
 				
