@@ -380,13 +380,13 @@
 			<form action='checkout.php' method='post'>
 				<div class='label'>
 					<label>First Name</label>
-					<input type='text' name='firstname' pattern="[a-zA-Z.'- ]*{1}[a-zA-Z.'-]*$ "
+					<input type='text' name='firstname' pattern="^[a-zA-Z.']{1,}$"
 					title="Name must only contain letters and some special characters such as ' . -" required><br>
 				</div>
 				
 				<div class='label'>
 					<label>Last Name</label>
-					<input type='text' name='lastname' pattern="[a-zA-Z.'- ]*{1}[a-zA-Z.'-]*$ "
+					<input type='text' name='lastname' pattern="^[a-zA-Z.']{1,}$"
 					title="Name must only contain letters and some special characters such as ' . -" required><br>
 				</div>
 				

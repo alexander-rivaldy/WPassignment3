@@ -25,7 +25,7 @@
 <header>
 </header>
 	<form action="" method="POST">
-		Name: <input type="text" name="name" pattern="^[a-zA-Z.'- ]*{1}[a-zA-Z.'-]*$ " 
+		Name: <input type="text" name="name" pattern="^[a-zA-Z.']+$ " 
 				title="Name must only conatin letters and some special characters such as ' . -" required><br><br>
 		Email: <input type="text" name="email" pattern="^[a-zA-Z0-9.-_]*@[a-zA-Z]*.(edu|com|org)*(.au){0,1}$" 
 				title="Please enter a valid E-mail address. E.g john_Smith@abcd.com.au" required><br><br>
