@@ -40,7 +40,7 @@
 						</details>\
 					</div>\
 				</div>\
-				<a href='tickets.html'>Book Tickets</a>\
+				<a href='tickets.php'>Book Tickets</a>\
 			</div>");
 		if((movie[type].screenings).hasOwnProperty("Monday"))
 		{
